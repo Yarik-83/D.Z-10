@@ -1,0 +1,643 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+button {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+html,
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    /* width: 1366px; */
+}
+
+/* Breakpoints phone */
+
+@media (max-width: 768px) {
+    body {
+        max-width: 767px;
+    }
+
+    .body_wrapper {
+        background-image: url(/static/imegs/img/Background.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+    }
+
+    .header_burger {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 35px;
+    }
+
+    .header_burger:before,
+    .header_burger:after {
+        content: "";
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+    }
+
+    .header_burger:before {
+        top: 0;
+    }
+
+    .header_burger:after {
+        bottom: 0;
+    }
+
+    .header_burger span {
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        height: 5px;
+        top: 15px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #707c87;
+        height: 90px;
+        align-content: center;
+        padding: 0 30px;
+        z-index: 1;
+    }
+
+    .container {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    .heder_logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .heder_logo img {
+        height: 40px;
+    }
+
+    .name-site {
+        font-size: 25px;
+    }
+
+    .login img {
+        height: 100%;
+    }
+
+    .header_menu {
+        display: none;
+    }
+
+    .login-link {
+        display: none;
+    }
+
+    .content {
+        color: antiquewhite;
+        text-align: center;
+        padding-top: 100px;
+        width: 100%;
+        padding: 100px 10px 100px;
+        position: relative;
+    }
+
+    .button {
+        margin: 20px 0;
+        width: 234px;
+        height: 53px;
+        background-color: #f6f7ff;
+        border-radius: 4px;
+        color: #707c87;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.09px;
+        text-align: center;
+    }
+
+    .section2_bloc {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .section2 img {
+        width: 100%;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        height: 80px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+        background-color: #707c87;
+    }
+
+    .nav_list-footer {
+        order: -1;
+    }
+
+    .nav_list-footer,
+    .address-text,
+    .cite-name,
+    .number-description,
+    .phone-number {
+        display: none;
+    }
+
+    .social {
+        list-style-type: none;
+        display: flex;
+        gap: 15px;
+    }
+}
+
+/* Breakpoints tablet */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+
+    .body_wrapper {
+        background-image: url(/static/imegs/img/Background.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #707c87;
+        height: 100px;
+        align-content: center;
+        padding: 0 30px;
+        z-index: 1;
+    }
+
+    .container {
+        height: 40px;
+        display: grid;
+        grid-template-columns: auto 170fr 1fr;
+        gap: 18px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .header_burger {
+        order: 2;
+    }
+
+    .heder_logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .heder_logo img {
+        height: 40px;
+    }
+
+    .name-site {
+        font-size: 25px;
+        line-height: 25psx;
+    }
+
+    .login img {
+        height: 40px;
+    }
+
+    .header_list {
+        list-style-type: none;
+        display: flex;
+        gap: 12px;
+    }
+
+    .header_list a {
+        text-decoration: none;
+        color: #f6f7ff;
+    }
+
+    .login-link {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        color: antiquewhite;
+        text-align: center;
+        margin-top: 150px;
+        width: 60%;
+        min-width: 768px;
+        padding: 100px 10px 100px;
+        position: relative;
+    }
+
+    .section1 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 180px;
+    }
+
+    .section1_bloc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .section2 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-bottom: 120px;
+    }
+
+    .section2_bloc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 341px;
+    }
+
+    .section2 img {
+        width: 341px;
+        height: 216px;
+        border-radius: 15px;
+    }
+
+    .section2_bloc-description {
+        width: 70%;
+    }
+
+    .button {
+        width: 341px;
+        height: 53px;
+        background-color: #f6f7ff;
+        border-radius: 4px;
+        color: #707c87;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.09px;
+        text-align: center;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 13px;
+        width: 100%;
+        height: 100px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        align-items: center;
+        background-color: #707c87;
+    }
+
+    .address {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .address-text {
+        grid-column-start: 1;
+        grid-column-end: 8;
+    }
+
+    .support {
+        grid-row-start: 2;
+        grid-column-end: 3;
+    }
+
+    .nav_list-footer {
+        order: -1;
+    }
+
+    .nav_list-footer,
+    .cite-name,
+    .number-description,
+    .phone-number {
+        display: none;
+    }
+
+    .social {
+        list-style-type: none;
+        display: flex;
+        gap: 15px;
+    }
+}
+
+/* Breakpoints desktop */
+@media (min-width: 1023px) {
+
+    body {
+        width: 1366px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        background-color: #f6f7ff;
+        width: 1366px;
+        padding: 34px 100px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .heder_logo {
+        align-self: start;
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        grid-column: 1;
+    }
+
+    .name-site {
+        margin: 0;
+        font-family: "Work Sans", sans-serif;
+        font-style: normal;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 23.46px;
+    }
+
+    .header_list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        grid-column: 2;
+    }
+
+    .header_list li a {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 18.75px;
+        color: #707c87;
+        text-decoration: none;
+    }
+
+    .list a:active {
+        color: #2c36f2;
+    }
+
+    .login {
+        display: flex;
+        gap: 15px;
+        grid-column: 4;
+
+    }
+
+    .login-link {
+        border: none;
+        background-color: transparent;
+        color: #1f1e25;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        padding: 0;
+    }
+
+    .login-link:hover {
+        text-decoration: underline;
+    }
+
+    .content {
+        padding-top: 91px;
+    }
+
+    .section1 {
+        background-image: url(/static/imegs/img/Background.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: space-between;
+        padding: 85px 250px 99px 250px;
+    }
+
+    .section1_bloc-title {
+        margin: 0;
+        font-family: Roboto;
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 63.28px;
+        color: #f6f7ff;
+    }
+
+    .section1_bloc-text {
+        margin: 25px 0 29px 0;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23.44px;
+        color: #e0e1ea;
+    }
+
+    .button {
+        padding: 0;
+        width: 234px;
+        height: 53px;
+        background-color: #f6f7ff;
+        border-radius: 4px;
+        border: none;
+        color: #707c87;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.09px;
+        text-align: center;
+    }
+
+    .section2 {
+        background-color: #ffffff;
+        padding: 120px 250px 120px 250px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section2_bloc {
+        width: 379px;
+    }
+
+    .section2_bloc-title {
+        font-family: Roboto;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 56px;
+        color: #1f1e25;
+    }
+
+    .section2_bloc-description {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #707c87;
+        margin: 27px 0;
+    }
+
+    .button-blue {
+        background: #2c36f2;
+        color: #f6f7ff;
+        border: none;
+    }
+
+    .footer {
+        padding: 60px 98px;
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-start;
+        background-color: #f6f7ff;
+
+    }
+
+    .address {
+        width: 200px;
+    }
+
+    .logo_footer {
+        display: flex;
+        gap: 11px;
+        align-items: flex-end;
+        margin-bottom: 18px;
+    }
+
+    .cite-name {
+        margin: 0;
+        font-family: "Work Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #1f1e25;
+        font-style: normal;
+    }
+
+    .address-text {
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16.8px;
+        color: #707c87;
+        margin: 0;
+    }
+
+    .list-footer {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .list-footer li a {
+        text-decoration: none;
+        color: #707c87;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        align-items: start;
+    }
+
+    .list-footer li a:hover {
+        text-decoration: underline;
+    }
+
+    .list-footer li {
+        margin-bottom: 20px;
+    }
+
+    .support {
+        display: grid;
+        grid-template-rows: 16px 12px;
+        grid-template-columns: 10px 150px;
+        gap: 16px;
+        text-wrap: nowrap;
+    }
+
+    .number-description {
+        margin: 0;
+        grid-column: 2;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16.8px;
+        color: #707c87;
+    }
+
+    .phone {
+        display: grid;
+        grid-template-rows: 16px 26px;
+        grid-template-columns: 16px 180px;
+        gap: 16px;
+
+    }
+
+    .phone-number {
+        margin: 0;
+        text-decoration: none;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #1f1e25;
+    }
+
+    .social {
+        margin: 0;
+        display: flex;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+    }
+}
